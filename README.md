@@ -11,15 +11,27 @@ emotiondetection/
 ├── mfcc_csv/
 ```
 
-### 2. 运行 `SER-DATA-PROC.ipynb` 生成 `pickle` 格式的训练集和测试集（仅针对lld特征），大概生成四个文件：
+### 2. 运行 `SER-DATA-PROC.ipynb` 生成 `pickle` 格式的训练集和测试集（仅针对lld特征），大概生成如下文件：
 ```
 pickle_test_x_list
 pickle_test_y_list
 pickle_train_x_list
 pickle_train_y_list
+
+pickle_mfcc_test_x_list
+pickle_mfcc_train_x_list
 ```
 
 ### 3. 运行其他 `*.ipynb` 查看结果
+
+
+
+### Tips
+
+1. Jupyter 转 Python 脚本命令： `jupyter nbconvert --to script [XXX.ipynb]`， 参见链接：http://stackoverflow.com/questions/17077494/how-do-i-convert-a-ipython-notebook-into-a-python-file-via-commandline
+
+2. 用MFCC特征训练模型，或训练其他比较大的模型时，最好直接在Python下执行，避免负载过大导致Jupyter卡死或挂掉影响其他Jupyter工作环境
+
 
 
 ### TODO
